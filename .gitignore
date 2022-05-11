@@ -1,0 +1,4 @@
+﻿/.vs/**/*.*
+/bin/Debug/net5.0
+/obj
+/TodoApi.csproj.user
