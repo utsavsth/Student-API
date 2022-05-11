@@ -6,14 +6,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.OData;
 using TodoApi.Services;
-using Microsoft.AspNetCore.OData.Formatter;
-using System.Linq;
-using Microsoft.Net.Http.Headers;
-using Microsoft.AspNetCore.Http;
-using System.Collections;
-using Microsoft.AspNetCore.OData.Routing;
-using Microsoft.OData.ModelBuilder;
-using TodoApi.Models;
 
 namespace TodoApi
 {
@@ -44,9 +36,11 @@ namespace TodoApi
       if (env.IsDevelopment())
       {
         app.UseDeveloperExceptionPage();
-        app.UseSwagger();
-        app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TodoApi v1"));
+        
       }
+
+      app.UseSwagger();
+      app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TodoApi v1"));
 
       app.UseHttpsRedirection();
 
